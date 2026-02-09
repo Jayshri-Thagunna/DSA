@@ -10,7 +10,6 @@ class Node {
         this -> data = data;
         this -> next = NULL;
     }
-
 };
 
 void InsertAtEnd(Node * &head, int data) {
@@ -23,26 +22,34 @@ void InsertAtEnd(Node * &head, int data) {
     temp -> next = newNode;
 };
 
+void DeletionAtTail(Node * &head) {
+    //Base Case
+    if(head == nullptr) {
+        return;
+    }
+
+    Node * temp = head;
+    while (temp->next->next != NULL) {
+        temp = temp->next;
+    }
+    delete temp -> next;
+    temp->next = NULL;
+};
+
 void print(Node * &head) {
-    while (head != NULL) {
-        cout << head -> data << " ";
+    while(head != NULL) {
+        cout << head -> data <<" ";
         head = head -> next;
     }
 }
 
-void DeleteAtHead(Node * &head) {
-    Node *temp = head;
-    head = head -> next;
-    delete temp;
-}
-
 int main() {
-    Node *head = new Node(1);
+    Node * head = new Node (21);
 
-    for(int i = 2; i <= 10; i++){
+    for(int i = 22; i <= 30; i++) {
         InsertAtEnd(head, i);
     }
 
-    DeleteAtHead(head);
+    DeletionAtTail(head);
     print(head);
 }
