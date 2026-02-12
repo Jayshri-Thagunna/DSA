@@ -13,12 +13,13 @@ class Node {
     }
 };
 
-void print( Node * &head) {
-    while(head != NULL)
-    {
-        cout << head -> data <<" ";
-        head = head -> next;
+void display(Node* head) {
+    Node* temp = head;
+    while (temp != NULL) {
+        cout << temp -> data << " <-> ";
+        temp = temp -> next;
     }
+    cout << "NULL" << endl;
 }
 
 int main() {
@@ -27,5 +28,7 @@ int main() {
     head -> next -> next = new Node(5);
     head -> next -> next -> next = new Node(6);
 
-    print(head);
+    display(head);
+    
+
 }
