@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-#define MAX 4
+#define MAX 12
 
 int stack[MAX];
 int top = -1;
