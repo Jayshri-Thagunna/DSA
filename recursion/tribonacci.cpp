@@ -20,7 +20,7 @@ int main() {
     cin >> n;
 
     cout << "Tribonacci number at position " << n << " is: " 
-         << tribonacci(n);
+        << tribonacci(n);
 
     return 0;
 }
