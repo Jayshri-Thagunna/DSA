@@ -4,7 +4,7 @@ using namespace std;
 #define MAX 12
 
 int stack[MAX];
-int top = -1;
+int top = -1; 
 
 void push(int data) {
     if( top ==  MAX -1) {
