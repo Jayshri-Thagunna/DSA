@@ -37,7 +37,7 @@ void DeleteAtMiddle (Node * &head) {
         fast = fast -> next -> next;
     }
 
-    prev -> next = slow->next;
+    prev -> next = slow -> next;
 
     delete slow;
 
